@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leveled Up Construction | Quality Home Construction & Remodeling</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2e7d32;
+            --primary-light: #60ad5e;
+            --primary-dark: #005005;
+            --secondary: #455a64;
+            --light: #f5f5f5;
+            --dark: #263238;
+            --white: #ffffff;
+            --gray: #e0e0e0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo svg {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .logo-text span {
+            color: var(--secondary);
+        }
+        
+        nav ul {
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/api/placeholder/1200/800') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        /* About Section */
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        
+        .section-header p {
+            color: var(--secondary);
+            font-size: 1.1rem;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-img {
+            flex: 1;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: var(--gray);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: var(--white);
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .service-content {
+            padding: 20px;
+        }
+        
+        .service-content h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            height: 250px;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-overlay span {
+            color: var(--white);
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--gray);
+        }
+        
+        .testimonials-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            display: none;
+        }
+        
+        .testimonial.active {
+            display: block;
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            background-color: var(--white);
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        
+        .slider-dot.active {
+            background-color: var(--primary);
+        }
+        
+        /* Contact Section */
+        .contact-content {
+            display: flex;
+            gap: 40px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .contact-info p {
+            margin-bottom: 15px;
+        }
+        
+        .contact-info ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info ul li i {
+            margin-right: 10px;
+            color: var(--primary);
+        }
+        
+        .contact-form {
+            flex: 1;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            overflow: auto;
+        }
+        
+        .modal-content {
+            background-color: var(--white);
+            margin: 10% auto;
+            padding: 30px;
+            border-radius: 5px;
+            max-width: 600px;
+            position: relative;
+        }
+        
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .contact-modal-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-modal-header h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 50px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--primary);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--secondary);
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-content,
+            .contact-content {
+                flex-direction: column;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--white);
+                transition: left 0.3s;
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                padding: 20px;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <svg viewBox="0 0 100 100">
+                    <rect x="20" y="60" width="60" height="10" fill="#2e7d32" />
+                    <rect x="20" y="40" width="60" height="10" fill="#2e7d32" />
+                    <rect x="20" y="20" width="60" height="10" fill="#2e7d32" />
+                    <rect x="35" y="20" width="10" height="50" fill="#2e7d32" />
+                    <rect x="55" y="20" width="10" height="50" fill="#2e7d32" />
+                    <polygon points="20,20 50,5 80,20" fill="#2e7d32" />
+                </svg>
+                <div class="logo-text">LEVELED <span>UP</span> CONSTRUCTION</div>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Transform Your Home with Excellence</h1>
+            <p>Specializing in new construction, remodels, additions, kitchens, and bathrooms with quality craftsmanship and attention to detail.</p>
+            <a href="#contact" class="btn">Get a Free Quote</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Us</h2>
+                <p>Transforming homes and spaces with expert craftsmanship</p>
+            </div>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="/api/placeholder/600/400" alt="About Leveled Up Construction">
+                </div>
+                <div class="about-text">
+                    <h3>Your Trusted Construction Partner</h3>
+                    <p>At Leveled Up Construction, we believe in transforming spaces into places that inspire. With years of industry experience and a passion for quality craftsmanship, we've built a reputation for excellence in new construction, remodels, additions, and specialized kitchen and bathroom renovations.</p>
+                    <p>Led by Daniel Shuman, our team of skilled professionals is committed to bringing your vision to life while exceeding expectations in quality, timeliness, and attention to detail. We take pride in our work and treat each project as if it were our own home.</p>
+                    <p>From the initial consultation to the final walkthrough, we maintain open communication and transparency throughout the entire process, ensuring your complete satisfaction with the end result.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Professional construction and remodeling services</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="/api/placeholder/400/300" alt="New Construction">
+                    <div class="service-content">
+                        <h3>New Construction</h3>
+                        <p>Building your dream home from the ground up with quality materials and expert craftsmanship.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="/api/placeholder/400/300" alt="Home Remodeling">
+                    <div class="service-content">
+                        <h3>Home Remodeling</h3>
+                        <p>Transforming existing spaces to improve functionality, aesthetics, and value.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="/api/placeholder/400/300" alt="Home Additions">
+                    <div class="service-content">
+                        <h3>Home Additions</h3>
+                        <p>Expanding your living space with seamlessly integrated room additions.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="/api/placeholder/400/300" alt="Kitchen Renovations">
+                    <div class="service-content">
+                        <h3>Kitchen Renovations</h3>
+                        <p>Creating functional and beautiful kitchens tailored to your cooking and entertaining needs.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="/api/placeholder/400/300" alt="Bathroom Remodeling">
+                    <div class="service-content">
+                        <h3>Bathroom Remodeling</h3>
+                        <p>Designing luxurious and practical bathroom spaces that combine style and functionality.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="/api/placeholder/400/300" alt="Custom Carpentry">
+                    <div class="service-content">
+                        <h3>Custom Carpentry</h3>
+                        <p>Handcrafted woodwork and custom built-ins to add character and storage to your home.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Work</h2>
+                <p>Take a look at some of our completed projects</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="Project 1">
+                    <div class="gallery-overlay">
+                        <span>Kitchen Renovation</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="Project 2">
+                    <div class="gallery-overlay">
+                        <span>Master Bathroom</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="Project 3">
+                    <div class="gallery-overlay">
+                        <span>Home Addition</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="Project 4">
+                    <div class="gallery-overlay">
+                        <span>Custom Home</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="Project 5">
+                    <div class="gallery-overlay">
+                        <span>Basement Remodel</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="Project 6">
+                    <div class="gallery-overlay">
+                        <span>Outdoor Living</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="Project 7">
+                    <div class="gallery-overlay">
+                        <span>Living Room Renovation</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="Project 8">
+                    <div class="gallery-overlay">
+                        <span>Custom Cabinetry</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Client Testimonials</h2>
+                <p>What our clients say about our work</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial active">
+                    <p>"Leveled Up Construction transformed our outdated kitchen into a modern, functional space that exceeded our expectations. Daniel and his team were professional, detail-oriented, and completed the project on time and within budget. We couldn't be happier with the results!"</p>
+                    <div class="testimonial-author">- Michael & Sarah Johnson</div>
+                </div>
+                <div class="testimonial">
+                    <p>"We hired Leveled Up Construction for a complete bathroom remodel and were blown away by their expertise and craftsmanship. The team was courteous, clean, and respectful of our home. Daniel provided excellent communication throughout the project, and the final result is absolutely stunning!"</p>
+                    <div class="testimonial-author">- Jennifer Williams</div>
+                </div>
+                <div class="testimonial">
+                    <p>"After interviewing several contractors, we chose Leveled Up Construction for our home addition project. It was the best decision we could have made! Daniel's attention to detail and commitment to quality is evident in every aspect of the work. Our addition blends seamlessly with the existing structure and has added tremendous value to our home."</p>
+                    <div class="testimonial-author">- Robert & Emily Thompson</div>
+                </div>
+                <div class="testimonial">
+                    <p>"Daniel and his team at Leveled Up Construction built our custom home from the ground up, and we couldn't be more pleased with the experience. Their knowledge, craftsmanship, and dedication to customer satisfaction made the building process smooth and enjoyable. They truly turned our dream home into reality!"</p>
+                    <div class="testimonial-author">- David & Lisa Martinez</div>
+                </div>
+                <div class="slider-nav">
+                    <div class="slider-dot active" data-index="0"></div>
+                    <div class="slider-dot" data-index="1"></div>
+                    <div class="slider-dot" data-index="2"></div>
+                    <div class="slider-dot" data-index="3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Get in touch for a free consultation</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Build Something Great Together</h3>
+                    <p>Whether you're planning a new construction project, a home remodel, or a specialized kitchen or bathroom renovation, we're here to help bring your vision to life.</p>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Maryland Service Area</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>(410) 499-7622</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@leveledupconst.com</span>
+                        </li>
+                    </ul>
+                    <div>
+                        <button id="contactBtn" class="btn">Contact Us</button>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">Select a Service</option>
+                                <option value="new-construction">New Construction</option>
+                                <option value="remodeling">Home Remodeling</option>
+                                <option value="addition">Home Addition</option>
+                                <option value="kitchen">Kitchen Renovation</option>
+                                <option value="bathroom">Bathroom Remodeling</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="contact-modal-header">
+                <h3>Contact Leveled Up Construction</h3>
+                <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+            </div>
+            <form id="modal-contact-form">
+                <div class="form-group">
+                    <label for="modal-name">Name</label>
+                    <input type="text" id="modal-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-email">Email</label>
+                    <input type="email" id="modal-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-phone">Phone</label>
+                    <input type="tel" id="modal-phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="modal-message">Message</label>
+                    <textarea id="modal-message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-column">
+                <h3>Leveled Up Construction</h3>
+                <p>Quality construction and remodeling services with attention to detail and customer satisfaction.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#services">New Construction</a></li>
+                    <li><a href="#services">Home Remodeling</a></li>
+                    <li><a href="#services">Home Additions</a></li>
+                    <li><a href="#services">Kitchen Renovations</a></li>
+                    <li><a href="#services">Bathroom Remodeling</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-user"></i> Daniel Shuman, Owner</li>
+                    <li><i class="
