@@ -16,40 +16,17 @@
             --white: #ffffff;
             --gray: #e0e0e0;
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * {margin:0;padding:0;box-sizing:border-box;}
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: var(--dark);
             background-color: var(--light);
         }
-        
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        ul {
-            list-style: none;
-        }
-        
-        img {
-            max-width: 100%;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header */
+        a {text-decoration: none; color: inherit;}
+        ul {list-style: none;}
+        img {max-width: 100%;}
+        .container {max-width: 1200px; margin: 0 auto; padding: 0 20px;}
         header {
             background-color: var(--white);
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -58,84 +35,33 @@
             top: 0;
             z-index: 1000;
         }
-        
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 0;
         }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo svg {
-            height: 50px;
-            margin-right: 10px;
-        }
-        
-        .logo-text {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-        
-        .logo-text span {
-            color: var(--secondary);
-        }
-        
-        nav ul {
-            display: flex;
-        }
-        
-        nav ul li {
-            margin-left: 30px;
-        }
-        
-        nav ul li a {
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav ul li a:hover {
-            color: var(--primary);
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        /* Hero Section */
+        .logo {display: flex;align-items: center;}
+        .logo svg {height: 50px;margin-right: 10px;}
+        .logo-text {font-size: 1.8rem;font-weight: 700;color: var(--primary);}
+        .logo-text span {color: var(--secondary);}
+        nav ul {display: flex;}
+        nav ul li {margin-left: 30px;}
+        nav ul li a {font-weight: 500;transition: color 0.3s;}
+        nav ul li a:hover {color: var(--primary);}
+        .mobile-menu-btn {display: none;font-size: 1.5rem;cursor: pointer;}
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/api/placeholder/1200/800') center/cover no-repeat;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1200x800?text=Beautiful+Home+Exterior&bg=2e7d32&fg=ffffff') center/cover no-repeat;
             display: flex;
             align-items: center;
             text-align: center;
             color: var(--white);
             margin-top: 80px;
         }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-        
+        .hero-content {max-width: 800px;margin: 0 auto;}
+        .hero h1 {font-size: 3.5rem;margin-bottom: 20px;text-transform: uppercase;}
+        .hero p {font-size: 1.2rem;margin-bottom: 30px;}
         .btn {
             display: inline-block;
             background-color: var(--primary);
@@ -146,68 +72,22 @@
             font-weight: 700;
             transition: background-color 0.3s;
         }
-        
-        .btn:hover {
-            background-color: var(--primary-dark);
-        }
-        
-        /* About Section */
-        .section {
-            padding: 100px 0;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .section-header h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-        
-        .section-header p {
-            color: var(--secondary);
-            font-size: 1.1rem;
-        }
-        
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
-        
-        .about-img {
-            flex: 1;
-        }
-        
-        .about-text {
-            flex: 1;
-        }
-        
-        .about-text h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: var(--primary);
-        }
-        
-        .about-text p {
-            margin-bottom: 15px;
-        }
-        
-        /* Services Section */
-        .services {
-            background-color: var(--gray);
-        }
-        
+        .btn:hover {background-color: var(--primary-dark);}
+        .section {padding: 100px 0;}
+        .section-header {text-align: center;margin-bottom: 60px;}
+        .section-header h2 {font-size: 2.5rem;color: var(--primary);text-transform: uppercase;margin-bottom: 10px;}
+        .section-header p {color: var(--secondary);font-size: 1.1rem;}
+        .about-content {display: flex;align-items: center;gap: 40px;}
+        .about-img {flex: 1;}
+        .about-text {flex: 1;}
+        .about-text h3 {font-size: 1.8rem;margin-bottom: 20px;color: var(--primary);}
+        .about-text p {margin-bottom: 15px;}
+        .services {background-color: var(--gray);}
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
-        
         .service-card {
             background-color: var(--white);
             border-radius: 5px;
@@ -215,33 +95,15 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s;
         }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .service-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        
-        .service-content {
-            padding: 20px;
-        }
-        
-        .service-content h3 {
-            margin-bottom: 10px;
-            color: var(--primary);
-        }
-        
-        /* Gallery Section */
+        .service-card:hover {transform: translateY(-10px);}
+        .service-card img {width: 100%;height: 200px;object-fit: cover;}
+        .service-content {padding: 20px;}
+        .service-content h3 {margin-bottom: 10px;color: var(--primary);}
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
         }
-        
         .gallery-item {
             position: relative;
             overflow: hidden;
@@ -249,24 +111,17 @@
             height: 250px;
             cursor: pointer;
         }
-        
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s;
         }
-        
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-        
+        .gallery-item:hover img {transform: scale(1.1);}
         .gallery-overlay {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background-color: rgba(0,0,0,0.7);
             display: flex;
             justify-content: center;
@@ -274,29 +129,15 @@
             opacity: 0;
             transition: opacity 0.3s;
         }
-        
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-        
+        .gallery-item:hover .gallery-overlay {opacity: 1;}
         .gallery-overlay span {
             color: var(--white);
             font-size: 1.2rem;
             text-transform: uppercase;
             font-weight: 700;
         }
-        
-        /* Testimonials Section */
-        .testimonials {
-            background-color: var(--gray);
-        }
-        
-        .testimonials-slider {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-        
+        .testimonials {background-color: var(--gray);}
+        .testimonials-slider {max-width: 800px;margin: 0 auto;position: relative;}
         .testimonial {
             background-color: var(--white);
             padding: 30px;
@@ -305,27 +146,10 @@
             text-align: center;
             display: none;
         }
-        
-        .testimonial.active {
-            display: block;
-        }
-        
-        .testimonial p {
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-        
-        .testimonial-author {
-            font-weight: 700;
-            color: var(--primary);
-        }
-        
-        .slider-nav {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-        }
-        
+        .testimonial.active {display: block;}
+        .testimonial p {font-style: italic;margin-bottom: 20px;}
+        .testimonial-author {font-weight: 700;color: var(--primary);}
+        .slider-nav {display: flex;justify-content: center;margin-top: 30px;}
         .slider-dot {
             width: 12px;
             height: 12px;
@@ -333,70 +157,27 @@
             border-radius: 50%;
             margin: 0 5px;
             cursor: pointer;
+            border: 2px solid var(--primary);
         }
-        
-        .slider-dot.active {
-            background-color: var(--primary);
-        }
-        
-        /* Contact Section */
-        .contact-content {
-            display: flex;
-            gap: 40px;
-        }
-        
-        .contact-info {
-            flex: 1;
-        }
-        
-        .contact-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: var(--primary);
-        }
-        
-        .contact-info p {
-            margin-bottom: 15px;
-        }
-        
-        .contact-info ul li {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .contact-info ul li i {
-            margin-right: 10px;
-            color: var(--primary);
-        }
-        
-        .contact-form {
-            flex: 1;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 500;
-        }
-        
+        .slider-dot.active {background-color: var(--primary);}
+        .contact-content {display: flex;gap: 40px;}
+        .contact-info {flex: 1;}
+        .contact-info h3 {font-size: 1.8rem;margin-bottom: 20px;color: var(--primary);}
+        .contact-info p {margin-bottom: 15px;}
+        .contact-info ul li {margin-bottom: 10px;display: flex;align-items: center;}
+        .contact-info ul li i {margin-right: 10px;color: var(--primary);}
+        .contact-form {flex: 1;}
+        .form-group {margin-bottom: 20px;}
+        .form-group label {display: block;margin-bottom: 5px;font-weight: 500;}
         .form-group input,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 5px;
         }
-        
-        .form-group textarea {
-            height: 150px;
-        }
-        
-        /* Modal */
+        .form-group textarea {height: 150px;}
         .modal {
             display: none;
             position: fixed;
@@ -408,7 +189,6 @@
             background-color: rgba(0,0,0,0.7);
             overflow: auto;
         }
-        
         .modal-content {
             background-color: var(--white);
             margin: 10% auto;
@@ -417,7 +197,6 @@
             max-width: 600px;
             position: relative;
         }
-        
         .close {
             position: absolute;
             top: 10px;
@@ -425,52 +204,23 @@
             font-size: 1.5rem;
             cursor: pointer;
         }
-        
-        .contact-modal-header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        
-        .contact-modal-header h3 {
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-        
-        /* Footer */
+        .contact-modal-header {text-align: center;margin-bottom: 20px;}
+        .contact-modal-header h3 {font-size: 1.8rem;color: var(--primary);margin-bottom: 10px;}
         footer {
             background-color: var(--dark);
             color: var(--white);
             padding: 50px 0 20px;
         }
-        
         .footer-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
             margin-bottom: 30px;
         }
-        
-        .footer-column h3 {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: var(--primary);
-        }
-        
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-column ul li a:hover {
-            color: var(--primary);
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 15px;
-        }
-        
+        .footer-column h3 {font-size: 1.2rem;margin-bottom: 20px;color: var(--primary);}
+        .footer-column ul li {margin-bottom: 10px;}
+        .footer-column ul li a:hover {color: var(--primary);}
+        .social-links {display: flex;gap: 15px;margin-top: 15px;}
         .social-links a {
             display: flex;
             justify-content: center;
@@ -481,38 +231,20 @@
             border-radius: 50%;
             transition: background-color 0.3s;
         }
-        
-        .social-links a:hover {
-            background-color: var(--primary);
-        }
-        
+        .social-links a:hover {background-color: var(--primary);}
         .copyright {
             text-align: center;
             padding-top: 20px;
             border-top: 1px solid rgba(255,255,255,0.1);
         }
-        
-        /* Responsive */
         @media (max-width: 992px) {
             .about-content,
-            .contact-content {
-                flex-direction: column;
-            }
-            
-            .section {
-                padding: 80px 0;
-            }
-            
-            .hero h1 {
-                font-size: 2.8rem;
-            }
+            .contact-content {flex-direction: column;}
+            .section {padding: 80px 0;}
+            .hero h1 {font-size: 2.8rem;}
         }
-        
         @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-            
+            .mobile-menu-btn {display: block;}
             nav {
                 position: fixed;
                 top: 80px;
@@ -522,27 +254,11 @@
                 background-color: var(--white);
                 transition: left 0.3s;
             }
-            
-            nav.active {
-                left: 0;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                padding: 20px;
-            }
-            
-            nav ul li {
-                margin: 10px 0;
-            }
-            
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .section-header h2 {
-                font-size: 2rem;
-            }
+            nav.active {left: 0;}
+            nav ul {flex-direction: column;padding: 20px;}
+            nav ul li {margin: 10px 0;}
+            .hero h1 {font-size: 2.2rem;}
+            .section-header h2 {font-size: 2rem;}
         }
     </style>
 </head>
@@ -595,7 +311,7 @@
             </div>
             <div class="about-content">
                 <div class="about-img">
-                    <img src="/api/placeholder/600/400" alt="About Leveled Up Construction">
+                    <img src="https://via.placeholder.com/600x400?text=Construction+Team+at+Work&bg=455a64&fg=ffffff" alt="Leveled Up Construction team working on-site">
                 </div>
                 <div class="about-text">
                     <h3>Your Trusted Construction Partner</h3>
@@ -616,42 +332,42 @@
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <img src="/api/placeholder/400/300" alt="New Construction">
+                    <img src="https://via.placeholder.com/400x300?text=New+Home+Construction&bg=2e7d32&fg=ffffff" alt="New Construction - House Build">
                     <div class="service-content">
                         <h3>New Construction</h3>
                         <p>Building your dream home from the ground up with quality materials and expert craftsmanship.</p>
                     </div>
                 </div>
                 <div class="service-card">
-                    <img src="/api/placeholder/400/300" alt="Home Remodeling">
+                    <img src="https://via.placeholder.com/400x300?text=Home+Remodeling&bg=60ad5e&fg=ffffff" alt="Home Remodeling - Before and After">
                     <div class="service-content">
                         <h3>Home Remodeling</h3>
                         <p>Transforming existing spaces to improve functionality, aesthetics, and value.</p>
                     </div>
                 </div>
                 <div class="service-card">
-                    <img src="/api/placeholder/400/300" alt="Home Additions">
+                    <img src="https://via.placeholder.com/400x300?text=Home+Addition&bg=005005&fg=ffffff" alt="Home Addition - Extra Room">
                     <div class="service-content">
                         <h3>Home Additions</h3>
                         <p>Expanding your living space with seamlessly integrated room additions.</p>
                     </div>
                 </div>
                 <div class="service-card">
-                    <img src="/api/placeholder/400/300" alt="Kitchen Renovations">
+                    <img src="https://via.placeholder.com/400x300?text=Kitchen+Renovation&bg=2e7d32&fg=ffffff" alt="Kitchen Renovation - Modern Kitchen">
                     <div class="service-content">
                         <h3>Kitchen Renovations</h3>
                         <p>Creating functional and beautiful kitchens tailored to your cooking and entertaining needs.</p>
                     </div>
                 </div>
                 <div class="service-card">
-                    <img src="/api/placeholder/400/300" alt="Bathroom Remodeling">
+                    <img src="https://via.placeholder.com/400x300?text=Bathroom+Remodeling&bg=455a64&fg=ffffff" alt="Bathroom Remodeling - Luxury Bathroom">
                     <div class="service-content">
                         <h3>Bathroom Remodeling</h3>
                         <p>Designing luxurious and practical bathroom spaces that combine style and functionality.</p>
                     </div>
                 </div>
                 <div class="service-card">
-                    <img src="/api/placeholder/400/300" alt="Custom Carpentry">
+                    <img src="https://via.placeholder.com/400x300?text=Custom+Carpentry&bg=60ad5e&fg=ffffff" alt="Custom Carpentry - Built-in Shelves">
                     <div class="service-content">
                         <h3>Custom Carpentry</h3>
                         <p>Handcrafted woodwork and custom built-ins to add character and storage to your home.</p>
@@ -670,49 +386,49 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="/api/placeholder/400/300" alt="Project 1">
+                    <img src="https://via.placeholder.com/400x300?text=Kitchen+Renovation&bg=2e7d32&fg=ffffff" alt="Project 1 - Kitchen Renovation">
                     <div class="gallery-overlay">
                         <span>Kitchen Renovation</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="/api/placeholder/400/300" alt="Project 2">
+                    <img src="https://via.placeholder.com/400x300?text=Master+Bathroom&bg=455a64&fg=ffffff" alt="Project 2 - Master Bathroom">
                     <div class="gallery-overlay">
                         <span>Master Bathroom</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="/api/placeholder/400/300" alt="Project 3">
+                    <img src="https://via.placeholder.com/400x300?text=Home+Addition&bg=005005&fg=ffffff" alt="Project 3 - Home Addition">
                     <div class="gallery-overlay">
                         <span>Home Addition</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="/api/placeholder/400/300" alt="Project 4">
+                    <img src="https://via.placeholder.com/400x300?text=Custom+Home&bg=60ad5e&fg=ffffff" alt="Project 4 - Custom Home">
                     <div class="gallery-overlay">
                         <span>Custom Home</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="/api/placeholder/400/300" alt="Project 5">
+                    <img src="https://via.placeholder.com/400x300?text=Basement+Remodel&bg=2e7d32&fg=ffffff" alt="Project 5 - Basement Remodel">
                     <div class="gallery-overlay">
                         <span>Basement Remodel</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="/api/placeholder/400/300" alt="Project 6">
+                    <img src="https://via.placeholder.com/400x300?text=Outdoor+Living&bg=455a64&fg=ffffff" alt="Project 6 - Outdoor Living">
                     <div class="gallery-overlay">
                         <span>Outdoor Living</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="/api/placeholder/400/300" alt="Project 7">
+                    <img src="https://via.placeholder.com/400x300?text=Living+Room+Renovation&bg=005005&fg=ffffff" alt="Project 7 - Living Room Renovation">
                     <div class="gallery-overlay">
                         <span>Living Room Renovation</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="/api/placeholder/400/300" alt="Project 8">
+                    <img src="https://via.placeholder.com/400x300?text=Custom+Cabinetry&bg=60ad5e&fg=ffffff" alt="Project 8 - Custom Cabinetry">
                     <div class="gallery-overlay">
                         <span>Custom Cabinetry</span>
                     </div>
@@ -731,7 +447,7 @@
             <div class="testimonials-slider">
                 <div class="testimonial active">
                     <p>"Leveled Up Construction transformed our outdated kitchen into a modern, functional space that exceeded our expectations. Daniel and his team were professional, detail-oriented, and completed the project on time and within budget. We couldn't be happier with the results!"</p>
-                    <div class="testimonial-author">- Michael & Sarah Johnson</div>
+                    <div class="testimonial-author">- Michael &amp; Sarah Johnson</div>
                 </div>
                 <div class="testimonial">
                     <p>"We hired Leveled Up Construction for a complete bathroom remodel and were blown away by their expertise and craftsmanship. The team was courteous, clean, and respectful of our home. Daniel provided excellent communication throughout the project, and the final result is absolutely stunning!"</p>
@@ -739,11 +455,11 @@
                 </div>
                 <div class="testimonial">
                     <p>"After interviewing several contractors, we chose Leveled Up Construction for our home addition project. It was the best decision we could have made! Daniel's attention to detail and commitment to quality is evident in every aspect of the work. Our addition blends seamlessly with the existing structure and has added tremendous value to our home."</p>
-                    <div class="testimonial-author">- Robert & Emily Thompson</div>
+                    <div class="testimonial-author">- Robert &amp; Emily Thompson</div>
                 </div>
                 <div class="testimonial">
                     <p>"Daniel and his team at Leveled Up Construction built our custom home from the ground up, and we couldn't be more pleased with the experience. Their knowledge, craftsmanship, and dedication to customer satisfaction made the building process smooth and enjoyable. They truly turned our dream home into reality!"</p>
-                    <div class="testimonial-author">- David & Lisa Martinez</div>
+                    <div class="testimonial-author">- David &amp; Lisa Martinez</div>
                 </div>
                 <div class="slider-nav">
                     <div class="slider-dot active" data-index="0"></div>
@@ -887,4 +603,69 @@
                 <h3>Contact Info</h3>
                 <ul>
                     <li><i class="fas fa-user"></i> Daniel Shuman, Owner</li>
-                    <li><i class="
+                    <li><i class="fas fa-map-marker-alt"></i> Maryland Service Area</li>
+                    <li><i class="fas fa-phone"></i> (410) 499-7622</li>
+                    <li><i class="fas fa-envelope"></i> info@leveledupconst.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Leveled Up Construction. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu, testimonials slider, and contact modal -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // Testimonials Slider
+        const testimonials = document.querySelectorAll('.testimonial');
+        const dots = document.querySelectorAll('.slider-dot');
+        let currentTestimonial = 0;
+
+        function showTestimonial(index) {
+            testimonials.forEach((t, i) => {
+                t.classList.toggle('active', i === index);
+                dots[i].classList.toggle('active', i === index);
+            });
+            currentTestimonial = index;
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                showTestimonial(parseInt(dot.dataset.index));
+            });
+        });
+
+        // Optional: Auto-advance testimonials every 7 seconds
+        setInterval(() => {
+            let next = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(next);
+        }, 7000);
+
+        // Contact Modal
+        const contactBtn = document.getElementById('contactBtn');
+        const contactModal = document.getElementById('contactModal');
+        const closeModal = document.querySelector('.modal .close');
+
+        if(contactBtn && contactModal && closeModal) {
+            contactBtn.addEventListener('click', () => {
+                contactModal.style.display = 'block';
+            });
+            closeModal.addEventListener('click', () => {
+                contactModal.style.display = 'none';
+            });
+            window.addEventListener('click', (e) => {
+                if (e.target == contactModal) {
+                    contactModal.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
