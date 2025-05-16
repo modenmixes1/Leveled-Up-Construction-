@@ -144,7 +144,7 @@
       position: relative;
       overflow: hidden;
       border-radius: 5px;
-      height: 250px;
+      height: 200px;
       cursor: pointer;
     }
     .gallery-item img {
@@ -320,7 +320,7 @@
       </div>
       <div class="about-content">
         <div class="about-img">
-          <img src="images/team.jpg" alt="Leveled Up Construction team working on-site">
+          <img src="images/basement-remodel-plan.jpg" alt="Leveled Up Construction team working on-site">
         </div>
         <div class="about-text">
           <h3>Your Trusted Construction Partner</h3>
@@ -348,7 +348,7 @@
           </div>
         </div>
         <div class="service-card">
-          <img src="images/lvingroomrenovation.jpg" alt="Home Remodeling">
+          <img src="images/livingroomrenovation.jpg" alt="Home Remodeling">
           <div class="service-content">
             <h3>Home Remodeling</h3>
             <p>Transforming existing spaces to improve functionality, aesthetics, and value.</p>
@@ -369,7 +369,14 @@
           </div>
         </div>
         <div class="service-card">
-          <img src="images/custom-carpentry.webp" alt="Custom Carpentry">
+          <img src="images/addition.jpg" alt="Home Addition">
+          <div class="service-content">
+            <h3>Home Addition</h3>
+            <p>Expanding your living space with seamlessly integrated room additions.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <img src="images/customcarpentry.webp" alt="Custom Carpentry">
           <div class="service-content">
             <h3>Custom Carpentry</h3>
             <p>Handcrafted woodwork and custom built-ins to add character and storage to your home.</p>
@@ -379,115 +386,44 @@
     </div>
   </section>
 
-<!-- Gallery Section -->
-<div class="services-grid">
-  <div class="service-card">
-    <img src="images/newhome.jpg" alt="New Construction">
-    <div class="service-content">
-      <h3>New Construction</h3>
-      <p>Building your dream home from the ground up with quality materials and expert craftsmanship.</p>
+  <!-- Gallery Section -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Work</h2>
+        <p>Take a look at some of our completed projects</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/kitchen.jpg" alt="Kitchen Renovation">
+          <div class="gallery-overlay"><span>Kitchen Renovation</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/bathroom.jpg" alt="Master Bathroom">
+          <div class="gallery-overlay"><span>Master Bathroom</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/newhome.jpg" alt="Custom Home">
+          <div class="gallery-overlay"><span>Custom Home</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/basement-remodel-plan.jpg" alt="Basement Remodel">
+          <div class="gallery-overlay"><span>Basement Remodel</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/hero.jpeg" alt="Outdoor Living">
+          <div class="gallery-overlay"><span>Outdoor Living</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/livingroomrenovation.jpg" alt="Living Room Renovation">
+          <div class="gallery-overlay"><span>Living Room Renovation</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/customcarpentry.webp" alt="Custom Cabinetry">
+          <div class="gallery-overlay"><span>Custom Cabinetry</span></div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="service-card">
-    <img src="images/livingroomrenovation.jpg" alt="Home Remodeling">
-    <div class="service-content">
-      <h3>Home Remodeling</h3>
-      <p>Transforming existing spaces to improve functionality, aesthetics, and value.</p>
-    </div>
-  </div>
-  <div class="service-card">
-    <img src="images/kitchen.jpg" alt="Kitchen Renovations">
-    <div class="service-content">
-      <h3>Kitchen Renovations</h3>
-      <p>Creating functional and beautiful kitchens tailored to your cooking and entertaining needs.</p>
-    </div>
-  </div>
-  <div class="service-card">
-    <img src="images/bathroom.jpg" alt="Bathroom Remodeling">
-    <div class="service-content">
-      <h3>Bathroom Remodeling</h3>
-      <p>Designing luxurious and practical bathroom spaces that combine style and functionality.</p>
-    </div>
-  </div>
-  <div class="service-card">
-    <img src="images/addition.jpg" alt="Home Addition">
-    <div class="service-content">
-      <h3>Home Addition</h3>
-      <p>Expanding your living space with seamlessly integrated room additions.</p>
-    </div>
-  </div>
-  <div class="service-card">
-    <img src="images/customcarpentry.webp" alt="Custom Carpentry">
-    <div class="service-content">
-      <h3>Custom Carpentry</h3>
-      <p>Handcrafted woodwork and custom built-ins to add character and storage to your home.</p>
-    </div>
-  </div>
-</div>
-
-<style>
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-  }
-
-  .gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    height: 200px;
-    cursor: pointer;
-  }
-
-  .gallery-item-large {
-    grid-column: span 2;
-    grid-row: span 2;
-    height: 420px;
-  }
-
-  .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-    display: block;
-  }
-
-  .gallery-item:hover img {
-    transform: scale(1.05);
-  }
-
-  .gallery-overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: 700;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    transition: opacity 0.3s ease;
-  }
-
-  .gallery-item:hover .gallery-overlay {
-    opacity: 1;
-  }
-
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .gallery-item-large {
-      grid-column: span 1;
-      grid-row: span 1;
-      height: 250px;
-    }
-  }
-</style>
-
   </section>
 
   <!-- Testimonials Section -->
