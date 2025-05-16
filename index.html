@@ -51,15 +51,33 @@
         nav ul li a:hover {color: var(--primary);}
         .mobile-menu-btn {display: none;font-size: 1.5rem;cursor: pointer;}
         .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1200x800?text=Beautiful+Home+Exterior&bg=2e7d32&fg=ffffff') center/cover no-repeat;
+            min-height: 70vh;
             display: flex;
             align-items: center;
             text-align: center;
             color: var(--white);
             margin-top: 80px;
+            background: var(--primary);
+            position: relative;
         }
-        .hero-content {max-width: 800px;margin: 0 auto;}
+        .hero img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            opacity: 0.7;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            z-index: 1;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            color: #fff;
+        }
         .hero h1 {font-size: 3.5rem;margin-bottom: 20px;text-transform: uppercase;}
         .hero p {font-size: 1.2rem;margin-bottom: 30px;}
         .btn {
@@ -295,6 +313,7 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <img src="hero.jpeg" alt="Beautiful Home Exterior">
         <div class="container hero-content">
             <h1>Transform Your Home with Excellence</h1>
             <p>Specializing in new construction, remodels, additions, kitchens, and bathrooms with quality craftsmanship and attention to detail.</p>
@@ -311,7 +330,7 @@
             </div>
             <div class="about-content">
                 <div class="about-img">
-                    <img src="https://picsum.photos/400/300" alt="Sample Project">
+                    <img src="team.jpg" alt="Leveled Up Construction team working on-site">
                 </div>
                 <div class="about-text">
                     <h3>Your Trusted Construction Partner</h3>
@@ -332,42 +351,42 @@
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <img src="https://via.placeholder.com/400x300?text=New+Home+Construction&bg=2e7d32&fg=ffffff" alt="New Construction - House Build">
+                    <img src="new home.jpg" alt="New Construction">
                     <div class="service-content">
                         <h3>New Construction</h3>
                         <p>Building your dream home from the ground up with quality materials and expert craftsmanship.</p>
                     </div>
                 </div>
                 <div class="service-card">
-                    <img src="https://via.placeholder.com/400x300?text=Home+Remodeling&bg=60ad5e&fg=ffffff" alt="Home Remodeling - Before and After">
+                    <img src="remodeling.jpg" alt="Home Remodeling">
                     <div class="service-content">
                         <h3>Home Remodeling</h3>
                         <p>Transforming existing spaces to improve functionality, aesthetics, and value.</p>
                     </div>
                 </div>
                 <div class="service-card">
-                    <img src="https://via.placeholder.com/400x300?text=Home+Addition&bg=005005&fg=ffffff" alt="Home Addition - Extra Room">
+                    <img src="imagesaddition.jpg" alt="Home Additions">
                     <div class="service-content">
                         <h3>Home Additions</h3>
                         <p>Expanding your living space with seamlessly integrated room additions.</p>
                     </div>
                 </div>
                 <div class="service-card">
-                    <img src="https://via.placeholder.com/400x300?text=Kitchen+Renovation&bg=2e7d32&fg=ffffff" alt="Kitchen Renovation - Modern Kitchen">
+                    <img src="kitchen.jpg" alt="Kitchen Renovations">
                     <div class="service-content">
                         <h3>Kitchen Renovations</h3>
                         <p>Creating functional and beautiful kitchens tailored to your cooking and entertaining needs.</p>
                     </div>
                 </div>
                 <div class="service-card">
-                    <img src="https://via.placeholder.com/400x300?text=Bathroom+Remodeling&bg=455a64&fg=ffffff" alt="Bathroom Remodeling - Luxury Bathroom">
+                    <img src="bathroom.jpg" alt="Bathroom Remodeling">
                     <div class="service-content">
                         <h3>Bathroom Remodeling</h3>
                         <p>Designing luxurious and practical bathroom spaces that combine style and functionality.</p>
                     </div>
                 </div>
                 <div class="service-card">
-                    <img src="https://via.placeholder.com/400x300?text=Custom+Carpentry&bg=60ad5e&fg=ffffff" alt="Custom Carpentry - Built-in Shelves">
+                    <img src="custom carpentry.webp" alt="Custom Carpentry">
                     <div class="service-content">
                         <h3>Custom Carpentry</h3>
                         <p>Handcrafted woodwork and custom built-ins to add character and storage to your home.</p>
@@ -386,49 +405,49 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300?text=Kitchen+Renovation&bg=2e7d32&fg=ffffff" alt="Project 1 - Kitchen Renovation">
+                    <img src="kitchen.jpg" alt="Kitchen Renovation">
                     <div class="gallery-overlay">
                         <span>Kitchen Renovation</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300?text=Master+Bathroom&bg=455a64&fg=ffffff" alt="Project 2 - Master Bathroom">
+                    <img src="bathroom.jpg" alt="Master Bathroom">
                     <div class="gallery-overlay">
                         <span>Master Bathroom</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300?text=Home+Addition&bg=005005&fg=ffffff" alt="Project 3 - Home Addition">
+                    <img src="imagesaddition.jpg" alt="Home Addition">
                     <div class="gallery-overlay">
                         <span>Home Addition</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300?text=Custom+Home&bg=60ad5e&fg=ffffff" alt="Project 4 - Custom Home">
+                    <img src="new home.jpg" alt="Custom Home">
                     <div class="gallery-overlay">
                         <span>Custom Home</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300?text=Basement+Remodel&bg=2e7d32&fg=ffffff" alt="Project 5 - Basement Remodel">
+                    <img src="remodeling.jpg" alt="Basement Remodel">
                     <div class="gallery-overlay">
                         <span>Basement Remodel</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300?text=Outdoor+Living&bg=455a64&fg=ffffff" alt="Project 6 - Outdoor Living">
+                    <img src="hero.jpeg" alt="Outdoor Living">
                     <div class="gallery-overlay">
                         <span>Outdoor Living</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300?text=Living+Room+Renovation&bg=005005&fg=ffffff" alt="Project 7 - Living Room Renovation">
+                    <img src="remodeling.jpg" alt="Living Room Renovation">
                     <div class="gallery-overlay">
                         <span>Living Room Renovation</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300?text=Custom+Cabinetry&bg=60ad5e&fg=ffffff" alt="Project 8 - Custom Cabinetry">
+                    <img src="custom carpentry.webp" alt="Custom Cabinetry">
                     <div class="gallery-overlay">
                         <span>Custom Cabinetry</span>
                     </div>
@@ -642,7 +661,6 @@
             });
         });
 
-        // Optional: Auto-advance testimonials every 7 seconds
         setInterval(() => {
             let next = (currentTestimonial + 1) % testimonials.length;
             showTestimonial(next);
